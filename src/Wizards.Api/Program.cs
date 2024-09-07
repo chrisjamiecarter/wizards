@@ -25,6 +25,11 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseCors(options =>
+        {
+            options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+        });
+
         app.MapControllers();
 
         app.Run();
