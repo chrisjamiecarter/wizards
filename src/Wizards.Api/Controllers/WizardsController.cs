@@ -14,7 +14,7 @@ public class WizardsController : ControllerBase
             Id = Guid.NewGuid(),
             Name = "Harry Potter",
             ImageUrl = "https://chrisjamiecarter.github.io/wizards/img/HarryPotter.png",
-            Description = "A wizard from the Harry Potter universe."
+            Description = "The boy who lived. A wizard from the Harry Potter universe."
         },
         new Wizard
         {
@@ -189,7 +189,7 @@ public class WizardsController : ControllerBase
     [HttpGet("get")]
     public IEnumerable<Wizard> Get()
     {
-        return _wizards;
+        return _wizards.OrderBy(_ => Random.Shared.Next());
     }
 
     [HttpGet("get/{id}")]
