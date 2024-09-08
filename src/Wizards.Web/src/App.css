@@ -1,34 +1,79 @@
-.App {
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit
+}
+
+html {
+  font-size: calc(60% + 0.8vmin);
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #EFEFEF;
+}
+
+* {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.loading, .error {
   text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 10vmin;
-  pointer-events: none;
+.wizard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.wizard-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+  .wizard-card:hover {
+    transform: translateY(-5px);
   }
+
+.wizard-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wizard-name {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wizard-description {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 10px 20px;
 }

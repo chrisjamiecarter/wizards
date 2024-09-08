@@ -14,20 +14,26 @@ public class WizardsController : ControllerBase
             Id = Guid.NewGuid(),
             Name = "Harry Potter",
             ImageUrl = "TBC",
-            Universe = "Harry Potter"
+            Description = "A wizard from the Harry Potter universe."
         },
         new Wizard
         {
             Id = Guid.NewGuid(),
             Name = "Gandalf",
             ImageUrl = "TBC",
-            Universe = "Lord of the Rings"
+            Description = "A wizard from the Lord of the Rings universe."
         }
     ];
 
-    [HttpGet]
+    [HttpGet("get")]
     public IEnumerable<Wizard> Get()
     {
         return _wizards;
+    }
+
+    [HttpGet("get/{id}")]
+    public Wizard? Get(Guid id)
+    {
+        return _wizards.FirstOrDefault(x => x.Id == id);
     }
 }

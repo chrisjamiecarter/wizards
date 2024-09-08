@@ -6,7 +6,7 @@ public class Wizard
 
     public string? Name { get; set; }
 
-    public string? Universe { get; set; }
+    public string? Description { get; set; }
 
     public string? ImageUrl { get; set; }
 }
