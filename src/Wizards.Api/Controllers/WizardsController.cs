@@ -5,6 +5,27 @@ using Wizards.Api.Models;
 
 namespace Wizards.Api.Controllers;
 
+/// <summary>
+/// The WizardsController class is responsible for handling API requests related to the 
+/// management and retrieval of Wizard data. It provides endpoints for retrieving a list 
+/// of wizards and individual wizard details from the database.
+/// </summary>
+/// <remarks>
+/// This controller interacts with the WizardsDataContext to perform database operations, 
+/// utilizing Entity Framework Core for data access. It supports the following operations:
+/// <list type="bullet">
+/// <item>
+/// <description>GET: Retrieves all wizards ordered by name.</description>
+/// </item>
+/// <item>
+/// <description>GET: Retrieves a specific wizard by its unique identifier (Guid).</description>
+/// </item>
+/// </list>
+/// </remarks>
+/// <example>
+/// GET api/wizards - Retrieves a list of wizards.
+/// GET api/wizards/{id} - Retrieves a specific wizard by ID.
+/// </example>
 [Route("api/[controller]")]
 [ApiController]
 public class WizardsController : ControllerBase

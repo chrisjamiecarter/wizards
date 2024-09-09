@@ -3,6 +3,9 @@ using Wizards.Api.Models;
 
 namespace Wizards.Api.Data;
 
+/// <summary>
+/// Represents the Entity Framework Core database context for the Wizards data store.
+/// </summary>
 public class WizardsDataContext : DbContext
 {
     #region Constructors
