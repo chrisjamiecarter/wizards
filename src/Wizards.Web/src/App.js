@@ -9,7 +9,7 @@ function App() {
     const [selectedWizard, setSelectedWizard] = useState(null);
 
     useEffect(() => {
-        fetch('https://localhost:7013/wizards/get')
+        fetch('https://localhost:7013/api/wizards')
             .then(response => {
                 if (response.ok) {
                     return response.json()
