@@ -1,74 +1,126 @@
-# wizards
-A project designed to demonstrate combing a .NET Web API with a React frontend.
+<div align="center">
+	<img src="./_resources/wizards-logo.png" alt="budget logo" width="100px" />
+	<h1>Wizards</h1>
+</div>
+
+Welcome to the **Wizards** App!
+
+This is a project designed to demonstrate combining a .NET Web API with a React frontend. 
+
+It allows users to view a list of wizards from an external API and select one to view more details!
+
+## Features
+
+- **Loading**: When the frontend application starts, it will show a Loading Data message.
+- **Error**: If there is an error when fetching the api data, it will show an Error message.
+- **List View**: When the api data has been fetched, a list of Wizards will be displayed.
+- **Detail View**: Users can click a Wizard to view more details.
+- **Responsive Design**: A user-friendly interface designed to work on various devices.
+- **API Methods**: Get methods are exposed within the api application.
+- **Database Seeding**: When the backend application start, it will create a database if required and inserts some initial data.
+
+## Technologies
+
+- .NET
+- React
+- CSS
+- JavaScript
+- Entity Framework Core
+- SQL Server
+
+## Getting Started
+
+The InitialCreate database migration has been created.
+
+The api application will migrate and created the database if required.
+
+### Prerequisites
+
+- .NET 8 SDK.
+- A code editor like Visual Studio or Visual Studio Code.
+- SQL Server.
+- SQL Server Management Studio (optional).
+- Node.js
+- NPM
+
+### Installation
+
+1. Clone the repository:
+	- `git clone https://github.com/chrisjamiecarter/wizards.git`
+
+2. Navigate to the API project directory:
+	- `cd src\Wizards\Wizards.Api`
+	
+3. Configure the application:
+	- Update the connection string in `appsettings.json` if you require.
+	
+4. Build the application using the .NET CLI:
+	- `dotnet build`
+
+5. Navigate to the Web project directory:
+	- `cd src\Wizards\Wizards.Web`
+
+6. Install dependencies:
+	- `npm install`
+
+### Running the Application
+
+1. Run the API application using the .NET CLI in the API project directory:
+	- `dotnet run`
+
+2. Start the development server in the Web project directory:
+	- `npm start`
+
+## Usage
+
+Once the Web application is running:
+
+- Loading Data message will show while fetch api is run.
+- View a list of Wizards.
+- Click on any Wizard to view more details.
+- If Error message is returned, check API is running, check port running on.
+
+### Loading Page
+
+![loading page](./_resources/wizards-loading.png)
 
 
-# Getting Started with Create React App
+### Wizards List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![wizards list](./_resources/wizards-list.png)
 
-## Available Scripts
 
-In the project directory, you can run:
+### Wizards Detail
 
-### `npm start`
+![wizards detail](./_resources/wizards-detail.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Error Page
 
-### `npm test`
+![error page](./_resources/wizards-error.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How It Works
 
-### `npm run build`
+- **Page Display**: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses React to render either the Wizards list or details view.
+- **API Integration**: Fetch is used to call the External API.
+- **Data Storage**: A new SQL Server database is created and the required schema is set up at run-time, or an existing database is used if previously created.
+- **Data Access**: Interaction with the database is via Entity Framework Core.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Database
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![entity relationship diagram](./_resources/entity-relationship-diagram.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions are welcome! Please fork the repository and create a pull request with your changes. For major changes, please open an issue first to discuss what you would like to change.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For any questions or feedback, please open an issue.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+***Happy Wizarding!***
